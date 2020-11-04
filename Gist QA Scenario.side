@@ -1,0 +1,261 @@
+{
+  "id": "495e3fad-2e89-4bb0-b491-4f3a93207006",
+  "version": "2.0",
+  "name": "Gist QA Scenario",
+  "url": "https://gist.github.com/lulukoctaviani",
+  "tests": [{
+    "id": "9a8e9b60-f186-4cf4-8799-ccb31c019f61",
+    "name": "Create, Edit, Delete a Gist",
+    "commands": [{
+      "id": "f922e520-4f84-4003-b752-10c4e9230578",
+      "comment": "",
+      "command": "open",
+      "target": "https://gist.github.com/lulukoctaviani",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b905b536-6150-4495-a98a-18de15634c79",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x754",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "084f3163-2b79-4eb4-a2d9-697687c32bd4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.p-nickname",
+      "targets": [
+        ["css=.p-nickname", "css:finder"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/div/div[2]/h1/span[2]", "xpath:idRelative"],
+        ["xpath=//h1/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'lulukOctaviani')]", "xpath:innerText"]
+      ],
+      "value": "Luluk Octaviani"
+    }, {
+      "id": "e8927727-4838-4558-bbc8-bbfc235bc1a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.octicon-plus:nth-child(2) > path",
+      "targets": [
+        ["css=.octicon-plus:nth-child(2) > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5334f5ee-461e-442b-9ad8-ba79bf0b3e73",
+      "comment": "",
+      "command": "click",
+      "target": "name=gist[description]",
+      "targets": [
+        ["name=gist[description]", "name"],
+        ["css=.input-block", "css:finder"],
+        ["xpath=//input[@name='gist[description]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bff6c50-8ebc-4d3e-b252-7b79582917e5",
+      "comment": "",
+      "command": "type",
+      "target": "name=gist[description]",
+      "targets": [
+        ["name=gist[description]", "name"],
+        ["css=.input-block", "css:finder"],
+        ["xpath=//input[@name='gist[description]']", "xpath:attributes"],
+        ["xpath=//div[@id='gists']/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Test description"
+    }, {
+      "id": "1ec8ee7e-c4ea-4422-a3c3-62c8d1c231b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.CodeMirror-lines",
+      "targets": [
+        ["css=.CodeMirror-lines", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div/div[2]/div/div[5]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d1a61bf-b19e-4711-9c55-21826e0ec1f7",
+      "comment": "",
+      "command": "type",
+      "target": "css=.CodeMirror-line",
+      "targets": [
+        ["css=.CodeMirror-line", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div/div[2]/div/div[5]/div/div/div/div/div[5]/div/pre", "xpath:idRelative"],
+        ["xpath=//pre", "xpath:position"],
+        ["xpath=//pre[contains(.,'​')]", "xpath:innerText"]
+      ],
+      "value": "Gist"
+    }, {
+      "id": "53fb4a47-80b0-4e6d-bdf4-10cc7986a0b9",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.CodeMirror-code",
+      "targets": [
+        ["css=.CodeMirror-code", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div/div[2]/div/div[5]/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": "<div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" contenteditable=\"false\" style=\"left: -53px;\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 21px;\">1</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\" style=\"padding-right: 0.1px;\">Gist</span></pre></div>"
+    }, {
+      "id": "db161081-7b7a-474c-9e28-90c21eb9052e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.select-menu-button",
+      "targets": [
+        ["css=.select-menu-button", "css:finder"],
+        ["xpath=//form[@id='new_gist']/div/div[2]/div/details/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div/details/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "564f6584-eae6-4d6f-ab3f-13da8395d137",
+      "comment": "",
+      "command": "click",
+      "target": "css=.select-menu-item:nth-child(2) .select-menu-item-heading",
+      "targets": [
+        ["css=.select-menu-item:nth-child(2) .select-menu-item-heading", "css:finder"],
+        ["xpath=//form[@id='new_gist']/div/div[2]/div/details/details-menu/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create public gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a406540b-e3e7-4bb4-840c-29256f0bfd86",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hx_create-pr-button",
+      "targets": [
+        ["css=.hx_create-pr-button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='new_gist']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create public gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ee832e3-ab37-4edc-bb07-1afb93512ab7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=li > .btn", "css:finder"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/lulukOctaviani/d156bad1064f30916ca23d41c21afeb7/edit')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f80b39b-6087-4785-a7b4-de5f6add38b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.CodeMirror-line",
+      "targets": [
+        ["css=.CodeMirror-line", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div[2]/div[2]/div/div[5]/div/div/div/div/div[5]/div/pre", "xpath:idRelative"],
+        ["xpath=//pre", "xpath:position"],
+        ["xpath=//pre[contains(.,'Gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4af8ebd7-5e31-46f3-947f-6697040e7ff1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.CodeMirror-line",
+      "targets": [
+        ["css=.CodeMirror-line", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div[2]/div[2]/div/div[5]/div/div/div/div/div[5]/div/pre", "xpath:idRelative"],
+        ["xpath=//pre", "xpath:position"],
+        ["xpath=//pre[contains(.,'​')]", "xpath:innerText"]
+      ],
+      "value": "Gist2"
+    }, {
+      "id": "2d6a7194-1f7f-45ef-acd1-6ab40642e778",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.CodeMirror-code",
+      "targets": [
+        ["css=.CodeMirror-code", "css:finder"],
+        ["xpath=//div[@id='gists']/div[2]/div[2]/div[2]/div/div[5]/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": "<div style=\"position: relative;\"><div class=\"CodeMirror-gutter-wrapper\" contenteditable=\"false\" style=\"left: -53px;\"><div class=\"CodeMirror-linenumber CodeMirror-gutter-elt\" style=\"left: 0px; width: 21px;\">1</div></div><pre class=\" CodeMirror-line \" role=\"presentation\"><span role=\"presentation\" style=\"padding-right: 0.1px;\">Gist2</span></pre></div>"
+    }, {
+      "id": "72a0db5e-e7db-4ad0-b860-6e6f05540bd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-actions > .btn-primary",
+      "targets": [
+        ["css=.form-actions > .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//form[@id='edit_gist_106271109']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update public gist')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97f60cc2-42ed-4a1d-bb31-7b30d1e08a29",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebaff055-380a-4781-b082-93364647e00c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//main[@id='gist-pjax-container']/div/div/div/ul/li[2]/form/button", "xpath:idRelative"],
+        ["xpath=//li[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f7debce-94ff-4d4c-b42d-26ec789361d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.name",
+      "targets": [
+        ["css=.name", "css:finder"],
+        ["xpath=//div[@id='user-links']/details/summary", "xpath:idRelative"],
+        ["xpath=//summary", "xpath:position"],
+        ["xpath=//summary[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07cec94a-ede3-4594-9a63-a4892811dcf1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Your gists",
+      "targets": [
+        ["linkText=Your gists", "linkText"],
+        ["css=.dropdown-item:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Your gists')]", "xpath:link"],
+        ["xpath=//div[@id='user-links']/details/details-menu/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/lulukOctaviani')])[3]", "xpath:href"],
+        ["xpath=//details-menu/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your gists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "580660f6-aa4d-4090-89a1-ecb8860d6870",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://gist.github.com/", "https://gist.github.com/lulukoctaviani"],
+  "plugins": []
+}
